@@ -80,7 +80,8 @@ python scripts/train.py \
   --device auto \
   --precision fp32 \
   --batch_size 16 \
-  --epoch 10
+  --epoch 100 \
+  --patience 10
 ```
 
 If you use precomputed embeddings, pass `--embedding_source precomputed` and `--precomputed_embeddings_dir`.
@@ -110,6 +111,20 @@ python scripts/inference.py \
   --precomputed_embeddings_dir /path/to/embeddings \
   --precomputed_format auto \
   --precomputed_granularity per_sequence
+```
+
+### Search / Retrieval
+Use the candidate FASTA and a seed FASTA. FAISS is optional; disable it via `ESM_EZY_USE_FAISS=0`.
+
+```bash
+ESM_EZY_USE_FAISS=0 python scripts/retrieval.py \
+  --candidate_data data/petase/pazy.fasta \
+  --seed_data data/petase/pazy_search_1.fasta \
+  --output_path /tmp/esm2_ezy_search \
+  --embedding_source fair_esm2 \
+  --esm_checkpoint esm2_t36_3B_UR50D \
+  --device auto \
+  --precision fp32
 ```
 
 Single `.npz` container (keys are IDs; no FASTA required):
