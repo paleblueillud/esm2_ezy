@@ -2,8 +2,8 @@
 
 Minimal ESM2-based pipeline that supports on-the-fly **fair-esm** embeddings or **precomputed** embeddings, with a fixed `d_model` projection for downstream stability.
 
-![CI](https://img.shields.io/github/actions/workflow/status/westlake-repl/ESM-Ezy/ci.yml?branch=main)
-![License](https://img.shields.io/github/license/westlake-repl/ESM-Ezy)
+![CI](https://img.shields.io/github/actions/workflow/status/paleblueillud/esm2_ezy/ci.yml?branch=main)
+![License](https://img.shields.io/github/license/paleblueillud/esm2_ezy)
 ![Python](https://img.shields.io/badge/python-3.10-blue)
 
 ## Table of contents
