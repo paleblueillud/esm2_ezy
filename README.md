@@ -1,6 +1,6 @@
-# ESM-Ezy (ESM2 embeddings for protein classification)
+# ESM2-Ezy
 
-Minimal ESM2-based pipeline that supports on-the-fly **fair-esm** embeddings or **precomputed** embeddings, with a fixed `d_model` projection for downstream stability.
+ESM2-based pipeline that supports **fair-esm** embeddings or **precomputed** embeddings based on ESM-Ezy pipeline.
 
 ![CI](https://img.shields.io/github/actions/workflow/status/paleblueillud/esm2_ezy/ci.yml?branch=main)
 ![License](https://img.shields.io/github/license/paleblueillud/esm2_ezy)
