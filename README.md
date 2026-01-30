@@ -66,6 +66,25 @@ PY
 
 ## Running
 
+### Training
+Training expects FASTA files for positive/negative splits.
+
+```bash
+python scripts/train.py \
+  --train_positive_data data/petase/positive_train.fasta \
+  --train_negative_data data/petase/negative_train.fasta \
+  --test_positive_data data/petase/positive_test.fasta \
+  --test_negative_data data/petase/negative_test.fasta \
+  --embedding_source fair_esm2 \
+  --esm_checkpoint esm2_t36_3B_UR50D \
+  --device auto \
+  --precision fp32 \
+  --batch_size 16 \
+  --epoch 10
+```
+
+If you use precomputed embeddings, pass `--embedding_source precomputed` and `--precomputed_embeddings_dir`.
+
 ### fair-esm embeddings (on-the-fly)
 Requires sequences (FASTA). ESM2 weights will download on first use.
 
