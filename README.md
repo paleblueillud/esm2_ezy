@@ -120,7 +120,7 @@ Use the candidate FASTA and a seed FASTA. FAISS is optional; disable it via `ESM
 ESM_EZY_USE_FAISS=0 python scripts/retrieval.py \
   --candidate_data data/petase/pazy.fasta \
   --seed_data data/petase/pazy_search_1.fasta \
-  --output_path /tmp/esm2_ezy_search \
+  --output_path results/inference \
   --embedding_source fair_esm2 \
   --esm_checkpoint esm2_t36_3B_UR50D \
   --device auto \
@@ -130,7 +130,7 @@ ESM_EZY_USE_FAISS=0 python scripts/retrieval.py \
 Single `.npz` container (keys are IDs; no FASTA required):
 ```bash
 python scripts/inference.py \
-  --output_path /tmp/esm2_ezy_infer \
+  --output_path results/search \
   --embedding_source precomputed \
   --precomputed_embeddings_dir /path/to/embeddings.npz \
   --precomputed_format npz \
